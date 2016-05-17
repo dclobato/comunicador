@@ -143,7 +143,7 @@ while (opcao != 9):
                    "timestamp": time.strftime("%Y/%m/%d %H:%M:%S", time.gmtime()),
                    "body": str(msgBody)
                    }
-        destArn = "arn:aws:sns:us-east-1:168933643701:"+topicName
+        destArn = "arn:aws:sns:us-east-1:[redacted]:"+topicName
         status = SNSConnection.publish(topic=destArn,
                                        message=msgDict,
                                        message_structure="text")
